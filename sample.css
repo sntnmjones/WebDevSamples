@@ -1,0 +1,34 @@
+.box 
+{
+	background: grey;
+	height: 50px;
+	width: 200px;
+
+	border:2px solid black;
+	margin: 20px;
+	padding: 10px;
+	width: 300px;
+
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	border-radius: 15px;	/* does all 4 corners equally */
+	border-radius: 15px 15px 15px 15px;	/* is another shorthand method */
+
+	border-radius: 50%; /* will create an oval in this instance */
+	box-shadow: 1px 2px 0 2px #000;	/*will create a shadow for the box */
+	/* box-shadow: <inset><offset-x><offset-y><blur-radius><spread-radius><color> */
+}
+
+.element
+{
+	background-image: url(bg1.png), url(bg2.png);
+	background-position: top left, center right;
+	background-repeat: no-repeat, no-repeat;
+	background: linear-gradient(to bottom, red, yellow);
+
+	color: rgba(0,0,0,0.75);
+
+	opacity: 0.50;
+}
