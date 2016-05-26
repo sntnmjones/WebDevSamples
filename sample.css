@@ -23,12 +23,75 @@
 
 .element
 {
+	background-color: black;
 	background-image: url(bg1.png), url(bg2.png);
 	background-position: top left, center right;
 	background-repeat: no-repeat, no-repeat;
 	background: linear-gradient(to bottom, red, yellow);
+	background: radial-gradient(aqua, blue);
 
 	color: rgba(0,0,0,0.75);
 
 	opacity: 0.50;
+
+	transform: translate(20px, 30px);	/* moves element left, right, up, down */
+	transform: rotate(0deg);	/* rotates element at origin specified degree */
+	transform: scale(1.0);	/* scales element by decimal percentage */
+
+	transition: background-color 0.2s ease-in-out;
+}
+
+.element:hover
+{
+	background-color: blue;
+}
+
+@font-face	/* creates user defined font from web */
+{
+	font-family: 'nameoffont', sans-serif;
+	src: url('nameoffont-webfont.eot');
+	font-style: normal;
+	font-weight: normal;
+}
+
+@media
+only screen and (min-device-pixel-ratio: 2.0)	/* for retina display */
+{
+
+}
+
+@media screen and (max-width: 320px)	/* media query */
+{
+
+}
+
+@media screen and (orientation: landscape)	/* media query with orientation priority */
+{
+
+}
+
+.img
+{
+	float: left;	/* will align an element either left/right/none */
+	position: fixed;	/* will allow an element to stay in position regardless of whether the view is scrolled */
+	margin: 0 auto;	/* will horizontally center a block element */
+}
+
+/*-----------*/
+/* animation */
+/*-----------*/
+@keyframes fadeIn {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.modal-overlay.active
+{
+  animation: fadeIn 0.25s forwards;
 }
